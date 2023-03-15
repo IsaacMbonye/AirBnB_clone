@@ -1,12 +1,8 @@
 #!/usr/bin/python3
-"""This module creates a Place class"""
-
-from models.base_model import BaseModel
+from models import *
 
 
 class Place(BaseModel):
-    """Class for managing place objects"""
-
     city_id = ""
     user_id = ""
     name = ""
@@ -17,4 +13,7 @@ class Place(BaseModel):
     price_by_night = 0
     latitude = 0.0
     longitude = 0.0
-    amenity_ids = []
+    amenities = [""]
+
+    def __init__(self, *args, **kwargs):
+        super().__init__()
